@@ -7,22 +7,14 @@
             <form>
                 <div class="form-group">
                     <label for="exampleSelect1" class="form-label mt-4">Categoría</label>
-                    <select class="form-select form-select-lg" name="categoria">
-                      <option>General</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                    <select class="form-select form-select-lg" name="categoria" [(ngModel)]="categoriaSeleccionada">
+                      <option *ngFor="let categoria of categorias" [value]="categoria.value">{{ categoria.name }}</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleSelect1" class="form-label mt-4">Países</label>
-                    <select class="form-select form-select-lg" name="pais">
-                      <option>Cuba</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                    <select class="form-select form-select-lg" name="pais" [(ngModel)]="paisSeleccionada">
+                      <option *ngFor="let pais of paises" [value]="pais.value">{{ pais.name }}</option>
                     </select>
                   </div>
             </form>
