@@ -1,4 +1,6 @@
-<app-navbar [titulo] = "'App Noticias'"></app-navbar>
+<app-navbar [tituloNoticias] = "'App Noticias'" [tituloUsuarios]="'App Usuarios'"></app-navbar>
 <div class="container">
-  <app-formulario></app-formulario>
+  <app-formulario (parametrosSeleccionados)="buscarNoticias($event)"></app-formulario>
+  <app-spinner *ngIf="loading===true"></app-spinner>
+  <app-listado-noticias [listadoNoticias]="listaDeNoticias"></app-listado-noticias>
 </div>

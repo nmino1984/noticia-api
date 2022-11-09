@@ -7,6 +7,8 @@ import { ListadoNoticiasComponent } from './components/listado-noticias/listado-
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ListadoUsuariosComponent } from './components/listado-usuarios/listado-usuarios.component'
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     ListadoNoticiasComponent,
     SpinnerComponent,
-    FormularioComponent
+    FormularioComponent,
+    ListadoUsuariosComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

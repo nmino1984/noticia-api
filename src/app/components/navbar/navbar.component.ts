@@ -7,10 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  @Input() titulo: string;
+  @Input() tituloNoticias: string;
+  @Input() tituloUsuarios: string;
 
   constructor() { 
-    this.titulo = '';
+    this.tituloNoticias = '';
+    this.tituloUsuarios = '';
   }
 
   ngOnInit(): void {
